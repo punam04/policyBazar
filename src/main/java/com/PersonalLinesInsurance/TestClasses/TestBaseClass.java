@@ -23,9 +23,12 @@ public void SetUp()
 	
 }
 @AfterMethod
-public void TearDown()
+public void TearDown() throws Throwable
 {
-  //driver.close();
+  driver.quit();
+  
+  finalize();
+	
 }
 
 }

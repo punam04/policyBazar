@@ -1,18 +1,15 @@
 package com.PersonalLinesInsurance.TestClasses;
 
-import org.testng.annotations.Test;
-
 import com.PersonalLinesInsurance.POMClasses.HealthInsurancePagePOMClass;
 import com.PersonalLinesInsurance.POMClasses.HomePagePOMClass;
 import com.PersonalLinesInsurance.POMClasses.HowOldEachMemberPOMClass;
+import com.PersonalLinesInsurance.POMClasses.PersonalDetailsPOMClass;
+import com.PersonalLinesInsurance.POMClasses.WhereDoYouLivePOMClass;
 
-public class TC_03VerifyHowOldEachMember extends TestBaseClass
+public class TC_05VerfiyPersonalDetailsFunctionality extends TestBaseClass
 {
-	
-@Test	
-public void verifyAgeFunctionality()
+public void verifyPersonalDetailsFunctionality()
 {
-	
 	 HomePagePOMClass x=new HomePagePOMClass(driver);
 	  x.clickOnHealthInsurance();
 		HealthInsurancePagePOMClass P=new HealthInsurancePagePOMClass(driver); 
@@ -29,5 +26,16 @@ public void verifyAgeFunctionality()
 	y.clickOnMotherAge();
 	y.ClickOnContinue();
 	
+	WhereDoYouLivePOMClass  p= new WhereDoYouLivePOMClass(driver);
+	p.SelectCity();
+	
+	PersonalDetailsPOMClass V=new PersonalDetailsPOMClass(driver);
+		V.SelectGender();
+	    V.EnterFullName();
+	    V.EnterMobileNumber();
+	    V.clickOnContinue();
+		
+			
 }
+
 }

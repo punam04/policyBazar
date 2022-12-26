@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PersonalLinesInsurance.TestClasses.TC_03VerifyHowOldEachMember">
+      <class name="com.PersonalLinesInsurance.TestClasses.TC_04VerifyWhereDoYouLiveTestClass">
         <methods>
           <include name="TearDown"/>
           <include name="SetUp"/>
-          <include name="verifyAgeFunctionality"/>
+          <include name="VerfiyCityFunctionality"/>
         </methods>
-      </class> <!-- com.PersonalLinesInsurance.TestClasses.TC_03VerifyHowOldEachMember -->
+      </class> <!-- com.PersonalLinesInsurance.TestClasses.TC_04VerifyWhereDoYouLiveTestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

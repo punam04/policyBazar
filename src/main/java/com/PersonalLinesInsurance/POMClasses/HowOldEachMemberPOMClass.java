@@ -11,26 +11,87 @@ import org.openqa.selenium.support.ui.Select;
 public class HowOldEachMemberPOMClass 
 {
 	WebDriver driver;
-	public Select s;
+	static Select s;
+	static Select t;
+	static Select u;
+	static Select v;
+	static Select w;
+	static Select x;
 	
-	@FindBy(xpath="//select[contains(@class,'placeholder input_box select_input_box')]")
-	List<WebElement> MembersAge;
+	@FindBy(xpath="//select[@id='Self']")
+	WebElement yourAge;
 	
 
 	public void clickonyourAge()
 	{
-		MembersAge.get(1).click();
+		yourAge.click();
 		
 		s.selectByValue("29");
 	}
 	
+	@FindBy(xpath="//select[@id='Spouse']")
+	WebElement SpouseAge;
 	
-	public HowOldEachMemberPOMClass(WebDriver driver)
+	public void clickonspouseAge()
+	{
+		SpouseAge.click();
+		t.selectByValue("28");
+	}
+	
+ @FindBy(xpath="//select[@id='Son']")
+ WebElement SonAge;
+ 
+ public void clickOnSonAge()
+ {
+	 SonAge.click();
+	 u.selectByValue("2");
+	 
+}
+ @FindBy(xpath="//select[@id='Daughter']")
+ WebElement DaughterAge;
+ 
+ public void clickOnDaughterAge()
+ {
+	 DaughterAge.click();
+	 v.selectByValue("1");
+ }
+ 
+ @FindBy(xpath="//select[@id='Father']")
+ WebElement FatherAge;
+ 
+ public void clickOnFatherAge()
+ {
+	 FatherAge.click();
+	 w.selectByValue("60");
+ }
+ @FindBy(xpath="//select[@id='Mother']")
+ WebElement MotherAge;
+ 
+ public void clickOnMotherAge()
+ {
+	 MotherAge.click();
+	 x.selectByValue("58");
+ }
+ 
+@FindBy(xpath="//input[@id='submitButton']")
+WebElement Continue;
+
+public void ClickOnContinue()
+{
+	Continue.click();
+}
+ 
+ public HowOldEachMemberPOMClass(WebDriver driver)
 	{
 		this.driver=driver;
 		
 	PageFactory.initElements(driver, this);
-		s=new Select( MembersAge);
+		s=new Select( yourAge);
+		t=new Select(SpouseAge);
+		u=new Select(SonAge);
+		v=new Select(DaughterAge);
+		w=new Select(FatherAge);
+		x=new Select(MotherAge);
 	}
 
 
